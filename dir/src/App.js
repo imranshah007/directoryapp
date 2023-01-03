@@ -1,18 +1,18 @@
-import "./App.css";
-import Header from "./Components/Header";
-import Button from "./Components/Button";
-import NewPerson from "./Pages/NewPerson";
-import RetrieveInfo from "./Pages/RetrieveInfo";
 import { Routes, Route } from "react-router-dom";
+import "./App.css";
+import Navbar from "./Components/Navbar";
+import NewPerson from "./Components/NewPerson";
+import AddRet from "./Components/AddRet";
+import Retrieve from "./Components/Retrieve";
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <Button />
+      <Navbar />
+      <AddRet />
       <Routes>
         <Route path="/" element={<NewPerson />} />
-        <Route path="/retrieve" element={<RetrieveInfo />} />
+        <Route path="/retrieve" element={<Retrieve />} />
       </Routes>
     </div>
   );

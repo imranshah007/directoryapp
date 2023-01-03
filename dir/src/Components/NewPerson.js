@@ -1,10 +1,10 @@
 import React from 'react';
-import Main from '../Components/Main';
+import Body from './Body';
 
 function NewPerson() {
   return (
     <div className='new-person flex'>
-      <Main/>
+      <Body/>
     </div>
   )
 }

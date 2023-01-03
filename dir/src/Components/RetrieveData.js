@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function RetrieveMain() {
+function RetrieveData() {
   const [input, setInput] = useState();
   const [result, setResult] = useState("");
 
@@ -48,4 +48,4 @@ function RetrieveMain() {
   );
 }
 
-export default RetrieveMain;
+export default RetrieveData;
