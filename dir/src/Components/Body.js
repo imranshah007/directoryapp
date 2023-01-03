@@ -34,7 +34,7 @@ const Main = () => {
 
   const add = () => {
     if (name === "" || dob === "" || aadhar === "" || number === "") {
-      alert("Fill all the inputs!");
+      alert("Please Fill all the inputs fields");
     } else if (aadhar.length !== 12) {
       alert("Aadhar Number should be 12 digits long.");
     } else if (number.length !== 10) {
@@ -91,61 +91,37 @@ const Main = () => {
               <th className="thead bg-blue-500">Actions</th>
             </tr>
           </thead>
-          <tbody>
-            {details.map((e, i) => {
+          <tbody>{details.map((e, i) => {
               return (
                 <tr key={i}>
                   <td>
                     <input defaultValue={e.Name} type={"text"} />
                   </td>
                   <td>
-                    <input
-                      defaultValue={e.DateOfBirth}
-                      className="input-date"
-                      type={"date"}
-                    />
+                    <input className="input-date" defaultValue={e.DateOfBirth}  type={"date"}/>
                   </td>
                   <td>
-                    <input
-                      className="input-num"
-                      defaultValue={e.AadharNumber}
-                      type={"number"}
-                    />
+                    <input className="input-num"defaultValue={e.AadharNumber} type={"number"}/>
                   </td>
                   <td>
-                    <input
-                      className="input-num"
-                      defaultValue={e.MobileNumber}
-                      type={"number"}
-                    />
+                    <input className="input-num" defaultValue={e.MobileNumber} type={"number"}/>
                   </td>
                   <td>{e.Age}</td>
                   <td>
                     <button className="action">Save</button>
                     <button
-                      className="action right"
-                      onClick={() => removeAfterSave(e)}
-                    >
-                      Delete
-                    </button>
+                      className="action right" onClick={() => removeAfterSave(e)}>Delete
+                   </button>
                   </td>
                 </tr>
               );
             })}
             <tr style={{ display: hide }}>
               <td>
-                <input
-                  value={name}
-                  type={"text"}
-                  onChange={(e) => setName(e.target.value)}
-                />
+                <input value={name} type={"text"} onChange={(e) => setName(e.target.value)}/>
               </td>
               <td>
-                <input
-                  value={dob}
-                  className="input-date"
-                  type={"date"}
-                  onChange={(e) => setDob(e.target.value)}
+                <input value={dob} className="input-date" type={"date"} onChange={(e) => setDob(e.target.value)}
                 />
               </td>
               <td>
